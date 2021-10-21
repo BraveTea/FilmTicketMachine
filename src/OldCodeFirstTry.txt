@@ -1,0 +1,35 @@
+
+//import java.util.Scanner;
+//
+//public class TicketMachine {
+//
+//    String nameFilm;
+//    double cost;
+//
+//    TicketMachine(String nameFilm, double cost){
+//        this.nameFilm = nameFilm;
+//        this.cost = cost;
+//    }
+//
+//    TicketMachine(){
+//        this.nameFilm = "StarWars: A New Hope";
+//        this.cost = 1.0;
+//    }
+//
+//    public void payAndPrintTicket(double amountPaid){
+//        Scanner userInput = new Scanner(System.in);
+//        double amountPaid = userInput.nextDouble();
+//
+//        if (amountPaid >= cost){
+//            System.out.printf("Do you wish to pay and print the ticket? %n Please enter Y for Yes and N for No");
+//            Scanner doYouWantToPrintTicket = new Scanner(System.in);
+//
+//            if (doYouWantToPrintTicket )
+//            System.out.printf("Here is your ticket for %s which cost %.2f euros", nameFilm, cost);
+//            if (amountPaid > cost){
+//                double change = amountPaid - cost;
+//                System.out.printf("Clink, clink, clink, goes the sound of %f.2f in change", change);
+//            }
+//        }
+//    }
+//}
