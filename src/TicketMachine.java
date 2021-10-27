@@ -71,10 +71,21 @@ public class TicketMachine {
         System.out.printf("%.2f left to pay. Please input coins.%n", cost-amount);
         while (amount < cost) {
             Scanner userInput = new Scanner(System.in);
-            double coin = userInput.nextDouble();
-            amount += coin;
-            System.out.printf("%.2f left to pay.%n", cost-amount);
-            if (amount < cost){
+
+            if (userInput.hasNextDouble()) { //check to see input == double
+                double coin = userInput.nextDouble();
+                if (coin > 0) {
+                    amount += coin;
+                } else {
+                    System.out.printf("You have tried to pay with %.2f.%nPlease pay with positive amounts.%n", coin);
+                }
+                System.out.printf("%.2f left to pay.%n", cost - amount);
+                if (amount < cost) {
+                    abort();
+                }
+            }
+            else{ //if input isn't a double, let user know, give abort choice and have them try again if not aborted
+                System.out.println("Your current input is incorrect. Please enter a numeral");
                 abort();
             }
         }
